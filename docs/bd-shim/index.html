@@ -7,8 +7,8 @@
 <style>
   :root { color-scheme: light; --ink: #30251d; --muted: #6f6257; --paper: #e7dbc3; --panel: #f8f0df; --line: #b9a98e; --red: #af493d; --teal: #2f7865; --blue: #4c7291; --amber: #aa7625; --bad: #a8424d; --note-mark: var(--teal); font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', serif; }
   * { box-sizing: border-box; }
-  body { max-width: 1800px; min-height: 100svh; margin: 0 auto; padding: clamp(1rem, 3vw, 2rem); display: flex; flex-direction: column; justify-content: center; background: var(--paper); color: var(--ink); }
-  .deck { position: relative; width: 100%; min-height: clamp(780px, 80svh, 900px); perspective: 2400px; transition: height .4s ease; }
+  body { width: min(100%, 1700px); min-height: 100svh; margin: 0 auto; padding: clamp(1rem, 3vw, 2rem); display: flex; flex-direction: column; justify-content: center; background: var(--paper); color: var(--ink); }
+  .deck { position: relative; width: 100%; min-height: clamp(750px, 76svh, 860px); perspective: 2400px; transition: height .4s ease; }
   .slide { position: absolute; top: 0; right: 0; left: 0; display: grid; min-height: 100%; height: 100%; padding: clamp(2.5rem, 4vw, 4.25rem); border: 1px solid var(--line); border-radius: 1px 3px 3px 1px; background: repeating-linear-gradient(0deg, #8c795607 0 1px, transparent 1px 7px), radial-gradient(ellipse at 18% 10%, #fffdf5aa, transparent 36%), linear-gradient(90deg, #e7dac0 0, #f6edda 3.5%, var(--panel) 10%); box-shadow: inset 18px 0 24px #6a543015, inset 0 -12px 18px #6a543008, 0 18px 45px #5a473128; align-content: start; gap: 1.2rem; overflow: visible; opacity: 0; visibility: hidden; transform: translateX(2rem) rotateY(-11deg); transform-origin: left center; pointer-events: none; transition: opacity .3s ease, transform .64s cubic-bezier(.2,.72,.18,1), visibility 0s linear .64s; }
   .slide::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .32; background: repeating-linear-gradient(90deg, transparent 0 29px, #78634205 30px 31px, transparent 32px 59px); }
   .slide > * { position: relative; z-index: 1; }
